@@ -1,0 +1,14 @@
+# First, make sure to import the os module
+import os
+import glob  # Also import glob if you're using file patterns
+
+# Set your input and output directories
+input_directory = "./path/to/your/json/files"  # Update with your actual path
+output_directory = "./Converted_Json_Files"
+
+# Now run the conversion function
+dataframes = batch_convert_files_to_csv(
+    input_directory, 
+    output_directory, 
+    file_patterns=["*.geojson", "*.json", "*.geojson.txt"]
+)
